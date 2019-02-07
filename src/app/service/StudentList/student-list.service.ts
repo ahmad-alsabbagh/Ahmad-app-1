@@ -7,31 +7,28 @@ import { from } from 'rxjs';
 })
 export class StudentListService {
   private nextId: number;
-   students: Student[];
   constructor() {
-       this.students = this.getStudents;
-    // if no students, nextId is 0,
-    // otherwise set to 1 more than last todo id
+       const students = this.getStudents;
   }
 
   public addStudent(firstName: string, lastName: string, email: string, phoneNumber: string, payment: string, password: string): void {
-    let student = new student(firstName, lastName, email, phoneNumber, payment, password, this.getNextId());
-    let student = this.getTodo();
-    this.students.push(student);
+    const student = new Student(firstName, lastName, email, phoneNumber, payment, password, this.getNextId());
+    const students = this.getStudents();
+    students.push(student);
     // save the todos to local storage
-    this.setLocalStorageTodos(student);
+    this.setLocalStorageStudents(students);
     this.nextId++;
   }
 
   public getStudents(): Student[] {
-    let localStorageItem = JSON.parse(localStorage.getItem('students'));
+    const localStorageItem = JSON.parse(localStorage.getItem('students'));
     return localStorageItem == null ? [] : localStorageItem.students;
   }
 
   public removeTodo(id: number): void {
-    let todos = this.getStudents();
-    student = students.filter((student)=> student.id != id);
-    this.setLocalStorageTodos(students);
+    let students = this.getStudents();
+    students = students.filter((student) => student.id != id);
+    this.setLocalStorageStudents(students);
   }
 
   // private function to help save to local storage
@@ -42,7 +39,7 @@ export class StudentListService {
     if ( this.getStudents() .length == 0) {
       this.nextId = 0;
     } else {
-      let maxId = this.getStudents()[this.getStudents().length - 1].id;
+      const maxId = this.getStudents()[this.getStudents().length - 1].id;
       this.nextId = maxId + 1;
     }  }
 }
