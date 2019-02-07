@@ -1,0 +1,22 @@
+<body>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <div class="black-img">
+    <div class="log-class">
+      <div class="head">
+        <h4>Log-In And Make your Destiny</h4>
+      </div>
+      <form>
+        <div class="text-box">
+          <i class="fas fa-user"></i>
+          <input type="text" (input)="userName = $event.target.value" placeholder= "Username">
+        </div>
+        <div class="text-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" [value]="password" (input)="password = $event.target.value" placeholder="Password">
+        </div>
+        <input class="btn" type="button" name="" (click)="logIn()" value="sign-in">
+      </form>
+    </div>
+  </div>
+</body>
