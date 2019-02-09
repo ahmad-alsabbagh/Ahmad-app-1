@@ -10,6 +10,8 @@ import { DashBordComponent } from './component/dash-bord/dash-bord.component';
 import { RegisterComponent } from './component/register/register.component';
 import { SelectListComponent } from './component/select-list/select-list.component';
 import { NotFound404Component } from './not-found-404';
+import {FormsModule} from '@angular/forms';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { NotFound404Component } from './not-found-404';
     RegisterComponent,
     SelectListComponent,
     NotFound404Component
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
