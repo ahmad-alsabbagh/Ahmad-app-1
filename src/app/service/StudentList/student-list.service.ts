@@ -41,6 +41,15 @@ export class StudentListService {
     } else {
       const maxId = this.getStudents()[this.getStudents().length - 1].id;
       this.nextId = maxId + 1;
-    }  }
+    }
+   }
+  //  private getSideListData() {
+  //   let students = this.getStudents();
+  //   students = students.filter((student) => student.id != id);
+  //   this.setLocalStorageStudents(students);
+  //  }
+
+
 }
+
 

@@ -10,8 +10,11 @@ import { DashBordComponent } from './component/dash-bord/dash-bord.component';
 import { RegisterComponent } from './component/register/register.component';
 import { SelectListComponent } from './component/select-list/select-list.component';
 import { NotFound404Component } from './not-found-404';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { from } from 'rxjs';
+import { StudentListService } from './service/StudentList/student-list.service';
+import { SideListDataRComponent } from './component/side-list-data-r/side-list-data-r.component';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +23,18 @@ import { from } from 'rxjs';
     DashBordComponent,
     RegisterComponent,
     SelectListComponent,
-    NotFound404Component
+    NotFound404Component,
+    SideListDataRComponent,
+    HomeComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [StudentListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

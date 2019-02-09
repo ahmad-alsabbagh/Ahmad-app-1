@@ -4,13 +4,26 @@ import { LogInComponent } from './component/log-in/log-in.component';
 import { DashBordComponent } from './component/dash-bord/dash-bord.component';
 import { RegisterComponent } from './component/register/register.component';
 import { NotFound404Component } from './not-found-404';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
-  { path: 'home',
-  component: DashBordComponent
+  { path: 'Home',
+  component: HomeComponent,
+  children: [
+   {
+      path: '',
+      pathMatch: 'full',
+      redirectTo: 'Dash'
+   },
+   {path: 'Dash',
+   component: DashBordComponent,
+   },
+   { path: 'Register',
+   component: RegisterComponent,
+   }]
   },
   {
-     path: 'login',
+     path: 'Login',
      component: LogInComponent
   },
   {
@@ -23,9 +36,6 @@ const routes: Routes = [
     component: NotFound404Component,
     pathMatch: 'full'
  },
- { path: 'register',
-   component: RegisterComponent
- }
 ];
 
 @NgModule({

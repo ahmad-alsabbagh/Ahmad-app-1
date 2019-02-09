@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: url("src/assets/bg/bg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .black-img{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  div[class^='col-'] {
+    margin-top: 40px;
+  }
+  .card{
+    background-color: #212428;
+    border-color: #33383D;
+    color: #ffffff;
+  }

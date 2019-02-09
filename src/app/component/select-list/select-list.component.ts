@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-select-list',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  addStudent() {
+    this.router.navigate(['Home/Register']);
+
+
+  }
+
+  showList() {
+    this.router.navigate(['Home/Dash']);
+
+
+  }
 }
