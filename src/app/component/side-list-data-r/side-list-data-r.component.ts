@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {  Component, OnInit, Input } from '@angular/core';
+import { Student } from '../../classes/student';
 
 @Component({
   selector: 'app-side-list-data-r',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-list-data-r.component.css']
 })
 export class SideListDataRComponent implements OnInit {
-
-  constructor() { }
+  @Input() student: Student;
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }
+

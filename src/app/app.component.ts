@@ -10,8 +10,8 @@ import { from } from 'rxjs';
 export class AppComponent {
   title = 'KungFuClass';
   constructor(router: Router) {
-    // router.navigate(['login']);
-    router.navigate(['Home']);
+   router.navigate(['Login']);
+  // router.navigate(['Home']);
 
   }
 }

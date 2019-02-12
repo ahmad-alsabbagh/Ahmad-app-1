@@ -15,6 +15,7 @@ import { from } from 'rxjs';
 import { StudentListService } from './service/StudentList/student-list.service';
 import { SideListDataRComponent } from './component/side-list-data-r/side-list-data-r.component';
 import { HomeComponent } from './component/home/home.component';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './component/home/home.component';
     SelectListComponent,
     NotFound404Component,
     SideListDataRComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
 
   ],
   imports: [

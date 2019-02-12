@@ -2,3 +2,7 @@
   div[class^='col-'] {
     margin-top: 40px;
   }
+i{
+  float: right;
+  cursor: pointer;
+}

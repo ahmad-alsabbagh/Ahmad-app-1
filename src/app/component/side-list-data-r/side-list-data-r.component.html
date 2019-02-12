@@ -1,7 +1,20 @@
-<div>
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
-        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
-        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
-      </ul>
+<div *ngIf = 'student'>
+    <div class=" mx-auto">
+        <div class="card">
+          <div class="card-body ">
+
+            <div class="row mx-auto">
+            <div class="upper-text ml-4">{{student.firstName}}</div>
+            <div class="upper-text ml-4">{{student.lastName}}</div>
+            <div class="upper-text ml-4">{{student.id}}</div> 
+            </div>
+
+            <div class="row mx-auto">
+            <div class="upper-text ml-6">{{student.email}}</div>
+            <div class="upper-text ml-6">{{student.phoneNumber}}</div>
+            </div>
+          </div>
+        </div>
+    </div>
 </div>
+

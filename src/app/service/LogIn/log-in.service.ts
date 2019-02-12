@@ -5,15 +5,15 @@ import {StudentListService} from '../StudentList/student-list.service';
 })
 export class LogInService {
 
-  constructor(private studentService: StudentListService) {
-    let students = this.getList();
-  }
+  // constructor(private studentService: StudentListService) {
+  //   let students = this.getList();
+  // }
 
-  private validate(userName: string, password: string ) {
+  // private validate(userName: string, password: string ) {
 
 
-  }
-  private getList() {
-    return this.studentService.getStudents();
-  }
+  // }
+  // private getList() {
+  //   return this.studentService.getStudents();
+  // }
 }

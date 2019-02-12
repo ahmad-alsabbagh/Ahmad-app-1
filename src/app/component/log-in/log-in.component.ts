@@ -30,7 +30,7 @@ export class LogInComponent implements OnInit {
    onClickSubmit(data) {
       console.log(data.userName);
       console.log(data.password);
-      if (data.userName == 'asdasd' && data.password == 'asdasd') {
+      if (data.userName == '12345' && data.password == '12345') {
          alert('Login Successful');
          this.router.navigate(['Home']);
       } else {

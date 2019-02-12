@@ -21,3 +21,7 @@ body {
     border-color: #33383D;
     color: #ffffff;
   }
+  .upper-text{
+    display: inline;
+    font-size: 18px;
+  }
