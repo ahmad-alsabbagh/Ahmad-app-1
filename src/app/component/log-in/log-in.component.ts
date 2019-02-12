@@ -14,11 +14,11 @@ export class LogInComponent implements OnInit {
    constructor(private router: Router) { }
    ngOnInit() {
       this.formdata = new FormGroup({
-         userName: new FormControl('', Validators.compose([
+         uname: new FormControl('', Validators.compose([
             Validators.required,
             Validators.minLength(6)
          ])),
-         password: new FormControl('', this.passwordvalidation)
+         passwd: new FormControl('', this.passwordvalidation)
       });
    }
    passwordvalidation(formcontrol) {
@@ -28,11 +28,11 @@ export class LogInComponent implements OnInit {
    }
 
    onClickSubmit(data) {
-      console.log(data.userName);
-      console.log(data.password);
-      if (data.userName == '12345' && data.password == '12345') {
+      console.log(data.uname);
+      console.log(data.passwd);
+      if (data.uname == '12345' && data.passwd == '12345') {
          alert('Login Successful');
-         this.router.navigate(['Home']);
+         this.router.navigate(['Dash']);
       } else {
          alert('Invalid Login');
          return false;

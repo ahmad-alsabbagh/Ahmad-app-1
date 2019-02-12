@@ -1,0 +1,60 @@
+<div class="container register-form">
+
+    <div class="form">
+        <div class="note">
+            <p>Add Student</p>
+        </div>
+
+        <div class="form-content">
+            <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name"
+                                formControlName="firstName" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name"
+                                formControlName="lastName" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="email" formControlName="email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone" formControlName="phone" />
+                        </div>
+                    </div>
+                    <button type="button" class="btnSubmit" (click)="onClickSubmit(formdata.value)">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let student of list.getStudents()" (click)="onStudentClicked(student)">
+                            <td>{{student.firstName}}</td>
+                            <td>{{student.lastName}}</td>
+                            <td>{{student.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</div>

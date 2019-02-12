@@ -8,7 +8,7 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'KungFuClass';
+  title = 'KungFuAhmad';
   constructor(router: Router) {
    router.navigate(['Login']);
   // router.navigate(['Home']);

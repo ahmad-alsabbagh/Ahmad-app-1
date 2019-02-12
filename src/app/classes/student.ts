@@ -3,15 +3,12 @@ export class Student {
     lastName: string;
     email: string;
     phoneNumber: string;
-    password: string;
-    id: number;
 
-    constructor(firstName, lastName, email, phoneNumber, password, id) {
+
+    constructor(firstName, lastName, email, phoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.password = password;
-        this.id = id;
     }
 }
